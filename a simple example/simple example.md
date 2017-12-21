@@ -1,9 +1,9 @@
 # 水饺 #
 <hr/>
 价格与参考照片：
-![Alt text](/price.jpg)
+![价格](/price.jpg)
 
-![Alt text](/photo.jpg)
+![照片](/photo.jpg)
 <hr/>
 简评：
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;水饺作为北方的主食，自然也出现在了包罗万象的交大食堂里。四餐的水饺有三种馅料可选，也可以加两块钱买一盘混合口味的麻酱拌水饺。
