@@ -7,18 +7,24 @@
           <el-menu-item index="1-1">
             <a href="http://localhost:8080/#/food_review" target="_blank">美食点评</a>
           </el-menu-item>
-          <el-menu-item index="1-2">美食榜</el-menu-item>
+          <el-menu-item index="1-2">
+            美食榜
+          </el-menu-item>
         <el-menu-item-group title="资讯">
           <el-menu-item index="1-3">
             <a href="http://localhost:8080/#/queue" target="_blank">排队相关</a>
           </el-menu-item>
-          <el-menu-item index="1-3">本周菜单</el-menu-item>
+          <el-menu-item index="1-3">
+            本周菜单
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <el-submenu index="2">
         <template slot="title"><i class="el-icon-message"></i>消息</template>
         <el-menu-item-group>
-          <el-menu-item index="1-1">评论</el-menu-item>
+          <el-menu-item index="1-1">
+            <a href="http://localhost:8080/#/forum">论坛</a>>
+          </el-menu-item>
           <el-menu-item index="1-2">赞</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
