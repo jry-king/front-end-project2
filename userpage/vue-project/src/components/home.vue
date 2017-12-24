@@ -44,7 +44,6 @@
     color: #333;
   }
 </style>
-
 <script>
   export default {
     data() {
@@ -56,88 +55,39 @@
       return {
         input:'',
         tableData: Array(20).fill(item),
-        options: [ {
-          value: '食堂',
-          label: '食堂',
-          children: [{
-            value: 'basic',
-            label: '四餐',
-            children: [{
-              value: 'layout',
-              label: '甜魔烘培'
-            }, {
-              value: 'icon',
-              label: '成都小菜'
-            }, {
-              value: 'button',
-              label: '唐汇'
-            },{
-              value: 'button',
-              label: '韩式鸟叔炸鸡'
-            },{
-              value: 'button',
-              label: '泰式咖喱'
-            },{
-              value: 'button',
-              label: '港式滑蛋饭'
-            },{
-              value: 'button',
-              label: '顺德风味'
-            },{
-              value: 'button',
-              label: '麻辣香锅'
-            },{
-              value: 'button',
-              label: '广式拉肠粉'
-            },{
-              value: 'button',
-              label: '风味小吃'
-            },{
-              value: 'button',
-              label: '河南烩面'
-            },
-
-            ]
-          }, {
-            value: 'form',
-            label: '二餐',
-          }, {
-            value: 'data',
-            label: '三餐',
-          }, {
-            value: 'notice',
-            label: '一餐',
-          }, {
-            value: '五餐',
-            label: '五餐',
-          }, {
-            value: 'others',
-            label: '六餐',
-          }]
-        }, {
-          value: 'resource',
-          label: '菜系',
-          children: [{
+        options: [
+            {value: '食堂', label: '食堂',
+          children: [
+            {value: 'basic', label: '四餐',
+              children: [
+              {value: 'layout', label: '甜魔烘培'},
+              {value: 'icon', label: '成都小菜'},
+              {value: 'button', label: '唐汇'},
+              {value: 'button', label: '韩式鸟叔炸鸡'},
+              {value: 'button', label: '泰式咖喱'},
+              {value: 'button', label: '港式滑蛋饭'},
+              {value: 'button', label: '顺德风味'},
+              {value: 'button', label: '麻辣香锅'},
+              {value: 'button', label: '广式拉肠粉'},
+              {value: 'button', label: '风味小吃'},
+              {value: 'button', label: '河南烩面'}
+            ]},
+            {value: 'form', label: '二餐',},
+            {value: 'data', label: '三餐',},
+            {value: 'notice', label: '一餐',},
+            {value: '五餐', label: '五餐',},
+            {value: 'others', label: '六餐',}
+            ]},
+            {value: 'resource', label: '菜系', children: [{
             value: 'axure',
             label: '本帮菜'
-          }, {
-            value: 'sketch',
-            label: '川菜'
-          }, {
-            value: 'docs',
-            label: '西餐',
-            children:[{
-              value: 'layout',
-              label: '二餐时光塔'
-              }, {
-              value: 'jimu',
-              label: '四餐吉姆利德',
-            },{
-              value:'jimu1',
-              label:'五餐吉姆利德'},
-              {
-                value:'liu',
-                label:'六餐'}]
+          },
+            {value: 'sketch', label: '川菜'},
+            {value: 'docs', label: '西餐', children:[
+              {value: 'layout', label: '二餐时光塔'},
+              {value: 'jimu', label: '四餐吉姆利德',},
+              {value:'jimu1', label:'五餐吉姆利德'},
+              {value:'liu', label:'六餐'}]
           }]
         }],
         selectedOptions3: ['食堂', '菜系']
