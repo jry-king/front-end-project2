@@ -25,7 +25,9 @@
           <el-menu-item index="1-1">
             <a href="http://localhost:8080/#/forum">论坛</a>>
           </el-menu-item>
-          <el-menu-item index="1-2">赞</el-menu-item>
+          <el-menu-item index="1-2">
+            <a href="http://localhost:8080/#/like">收藏</a>
+          </el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>

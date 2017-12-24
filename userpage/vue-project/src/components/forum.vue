@@ -1,13 +1,15 @@
 <template>
   <div id="mylist">
     <h1 v-text="title"></h1>
+    <p v-text="helps"></p>
+    <p></p>
     <input class = 'inputItem' v-model='newItem' v-on:keyup.enter = "addNew"
            placeholder="What is your opinion?">
     <ul>
-      <li v-for = "item in items" class="editing: item == editedItem">
-        <h2 v-on:mouseenter='itemEnter(item)' v-on:mouseleave='itemLeave(item)'
+      <li v-for = "item in items">
+        <h2 v-on:click='toFinish(item)' v-on:mouseenter='itemEnter(item)'
+            v-on:mouseleave='itemLeave(item)'
             v-if='item.showLabel'>
-          <input type="checkbox" v-on:click='toFinish(item)'>
           <p class='item-label'>{{item.label}}</p>
           <p class='item-status' v-if='item.isFinished'>Like</p>
           <button class='item-delete' v-if='item.showDelete'
@@ -15,16 +17,19 @@
         </h2>
       </li>
     </ul>
+    <button class="back_button" v-if='show_back' v-on:click='back()'>Back to home</button>
   </div>
 </template>
 <script>
-  import Store from './store' //导入store
+  import Store from './store'
   export default{
     name: 'forum',
     data () {
       return {
         title: 'Write your idea',
+        helps: "Notice: Click the text to 'Like' it!",
         items:  Store.fetch(),
+        show_back: 'true',
         newItem: ''
       }
     },
@@ -61,6 +66,9 @@
       },
       deleteClick:function (item) {
         this.items.splice(this.items.indexOf(item),1)
+      },
+      back: function(){
+          this.$router.push('/home')
       }
     }
   }
@@ -83,6 +91,14 @@
     color: white;
     padding: 0 5px;
     font-size: 15px;
+  }
+  .back_button {
+    display:inline;
+    font-size: 14px;
+    width: 100px;
+    color: red;
+    padding: 0 5px;
+    cursor: pointer;
   }
   .item-delete {
     display: inline;

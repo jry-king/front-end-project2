@@ -5,6 +5,7 @@ import home from '@/components/home'
 import food_review from '@/components/food_review'
 import queue from '@/components/queue'
 import forum from '@/components/forum'
+import like from '@/components/like'
 import Element from 'element-ui'
 Vue.use(Element, { size: 'small' })
 Vue.use(Router)
@@ -35,6 +36,11 @@ export default new Router({
       path: '/forum',
       name: 'forum_component',
       component: forum
+    },
+    {
+      path: '/like',
+      name: 'like_component',
+      component: like
     }
   ]
 })
