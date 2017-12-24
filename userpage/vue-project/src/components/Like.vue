@@ -12,7 +12,6 @@
         </tr>
         <tr><td><button class="back_button" v-on:click='back()'>Back to home</button></td></tr>
       </table>
-
     </div>
 </template>
 <script>
