@@ -1,5 +1,4 @@
 <template>
-<<<<<<< HEAD
 <el-row>
   <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '30px' }">
@@ -15,12 +14,6 @@
     </el-card>
   </el-col>
 </el-row>
-=======
-    <div>
-      <img src="../assets/main.png">
-      <button class="back_button" v-on:click='back()'>Back to home</button>
-    </div>
->>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
 </template>
 <style>
   .time {
@@ -55,29 +48,15 @@
 </style>
 
 <script>
-<<<<<<< HEAD
   export default {
     data() {
       return {
         currentDate: new Date()
       };
-=======
-    export default{
-        name: 'Food_review',
-        data () {
-            return {}
-        },
-      methods:{
-            back:function () {
-              this.$router.push('/home')
-            }
-      }
->>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
     }
   }
 </script>
-<<<<<<< HEAD
-=======
+
 <style>
   .back_button {
     display:inline;
@@ -88,4 +67,4 @@
     cursor: pointer;
   }
 </style>
->>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
+
