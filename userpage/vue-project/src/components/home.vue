@@ -4,7 +4,9 @@
     <el-menu :default-openeds="['1', '3']">
       <el-submenu index="1">
         <template slot="title"><i class="el-icon-menu"></i>发现</template>
-          <el-menu-item index="1-1">美食点评</el-menu-item>
+          <el-menu-item index="1-1">
+            <a href="http://localhost:8080/#/food_review" target="_blank">美食点评</a>
+          </el-menu-item>
           <el-menu-item index="1-2">美食榜</el-menu-item>
         <el-menu-item-group title="资讯">
           <el-menu-item index="1-3">排队相关</el-menu-item>
