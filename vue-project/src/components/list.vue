@@ -8,17 +8,10 @@
             v-if='item.showLabel'>
           <input type="checkbox" v-on:click='toFinish(item)'>
           <p class='item-label'
-             v-on:dblclick='editItem(item)'
              >{{item.label}}</p>
           <p class='item-status' v-if='item.isFinished'>finished</p>
           <button class='item-delete' v-if='item.showDelete' v-on:click='deleteClick(item)'>Delete</button>
         </h3>
-        <input class="edit" type="text"
-               v-model="item.label"
-               v-if="item.showEdit"
-               v-on:blur="doneEdit(item)"
-               v-on:keyup.enter="doneEdit(item)"
-               v-on:keyup.esc="cancelEdit(item)">
       </li>
     </ul>
   </div>

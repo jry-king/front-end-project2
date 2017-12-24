@@ -1,6 +1,7 @@
 <template>
   <div id="mylist">
     <h1 v-text="title"></h1>
+<<<<<<< HEAD
     <input class = 'inputItem' v-model='newItem' v-on:keyup.enter = "addNew"
            placeholder="What is your opinion?">
     <ul>
@@ -8,6 +9,17 @@
         <h2 v-on:mouseenter='itemEnter(item)' v-on:mouseleave='itemLeave(item)'
             v-if='item.showLabel'>
           <input type="checkbox" v-on:click='toFinish(item)'>
+=======
+    <p v-text="helps"></p>
+    <p></p>
+    <input class = 'inputItem' v-model='newItem' v-on:keyup.enter = "addNew"
+           placeholder="What is your opinion?">
+    <ul>
+      <li v-for = "item in items">
+        <h2 v-on:click='toFinish(item)' v-on:mouseenter='itemEnter(item)'
+            v-on:mouseleave='itemLeave(item)'
+            v-if='item.showLabel'>
+>>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
           <p class='item-label'>{{item.label}}</p>
           <p class='item-status' v-if='item.isFinished'>Like</p>
           <button class='item-delete' v-if='item.showDelete'
@@ -15,18 +27,33 @@
         </h2>
       </li>
     </ul>
+<<<<<<< HEAD
   </div>
 
 </template>
 <script>
   import Store from './store' //导入store
+=======
+    <button class="back_button" v-if='show_back' v-on:click='back()'>Back to home</button>
+  </div>
+</template>
+<script>
+  import Store from './store'
+>>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
   export default{
     name: 'forum',
     data () {
       return {
         title: 'Write your idea',
+<<<<<<< HEAD
         items:  Store.fetch(),
         newItem: '',
+=======
+        helps: "Notice: Click the text to 'Like' it!",
+        items:  Store.fetch(),
+        show_back: 'true',
+        newItem: ''
+>>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
       }
     },
     watch: {
@@ -62,6 +89,12 @@
       },
       deleteClick:function (item) {
         this.items.splice(this.items.indexOf(item),1)
+<<<<<<< HEAD
+=======
+      },
+      back: function(){
+          this.$router.push('/home')
+>>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
       }
     }
   }
@@ -85,6 +118,17 @@
     padding: 0 5px;
     font-size: 15px;
   }
+<<<<<<< HEAD
+=======
+  .back_button {
+    display:inline;
+    font-size: 14px;
+    width: 100px;
+    color: red;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+>>>>>>> 0de994da18a15d92ed205824dbbb90b33a7ad4ec
   .item-delete {
     display: inline;
     font-size: 14px;
