@@ -16,6 +16,7 @@
       </li>
     </ul>
   </div>
+
 </template>
 <script>
   import Store from './store' //导入store
@@ -25,7 +26,7 @@
       return {
         title: 'Write your idea',
         items:  Store.fetch(),
-        newItem: ''
+        newItem: '',
       }
     },
     watch: {
