@@ -1,15 +1,6 @@
 <template>
   <div>
-<<<<<<< HEAD
     <div class="loginstyle" v-show="showlogin">
-      <h1>Food in SJTU</h1>
-      <img src="../assets/people/大厅.png">
-      <h1>登陆</h1>
-      <input v-model="username" placeholder="请输入用户名">
-      <input v-model="password" placeholder="请输入密码">
-      <button v-on:click="login_func">登陆</button>
-      <span v-on:click="TransToSignup">没有账号？马上注册</span>
-=======
     <div style="display: flex">
       <transition name="el-fade-in-linear">
         <div v-show="show">
@@ -29,9 +20,7 @@
         <el-button @click="signup_func" style="width:130px">注册</el-button>
         <div v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
       </div>
->>>>>>> 31021ea985bb85093857ce53fb8f7cc2b477741d
     </div>
-    <div>
     </div>
   </div>
 
