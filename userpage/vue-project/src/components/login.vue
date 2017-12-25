@@ -1,5 +1,6 @@
 <template>
   <div>
+<<<<<<< HEAD
     <div class="loginstyle" v-show="showlogin">
       <h1>Food in SJTU</h1>
       <img src="../assets/people/大厅.png">
@@ -8,22 +9,39 @@
       <input v-model="password" placeholder="请输入密码">
       <button v-on:click="login_func">登陆</button>
       <span v-on:click="TransToSignup">没有账号？马上注册</span>
+=======
+    <div style="display: flex">
+      <transition name="el-fade-in-linear">
+        <div v-show="show">
+          <img src="../assets/pic.png"></div>
+      </transition>
+      <div class="loginstyle" v-show="showlogin">
+        <div style="font-size:26px; margin-top:140px; color:steelblue">登录</div>
+        <input v-model="username" placeholder="请输入用户名">
+        <input v-model="password" placeholder="请输入密码">
+        <el-button @click="login_func" style="width:130px">登录</el-button>
+        <div v-on:click="TransToSignup" style="margin-top:20px">没有账号？马上注册</div>
+      </div>
+      <div class="signupstyle" v-show="showsignup">
+        <div style="font-size:26px; margin-top:140px; color:steelblue">注册</div>
+        <input v-model="username" placeholder="请输入用户名">
+        <input v-model="password" placeholder="请输入密码">
+        <el-button @click="signup_func" style="width:130px">注册</el-button>
+        <div v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
+      </div>
+>>>>>>> 31021ea985bb85093857ce53fb8f7cc2b477741d
     </div>
-    <div class="signupstyle" v-show="showsignup">
-      <h1>注册</h1>
-      <input v-model="username" placeholder="请输入用户名">
-      <input v-model="password" placeholder="请输入密码">
-      <button v-on:click="signup_func">注册</button>
-      <span v-on:click="TransToLogin">已有账号？立即登陆</span>
+    <div>
     </div>
-
   </div>
+
 </template>
 <script>
   export default{
     name: 'login',
     data () {
       return {
+        show:'true',
         username: '',
         password: '',
         showlogin: true,
@@ -52,16 +70,17 @@
           alert('请输入用户名和密码')
         } else {
           var userpos = this.users.indexOf(this.username)
-          if (userpos === -1) {
-            alert('用户名不存在！')
-            this.clear()
-          } else if (this.pass[userpos] !== this.password) {
-            alert('密码错误！')
-            this.clear()
-          } else {
-            alert('登陆成功!')
+          //if (userpos === -1) {
+            //alert('用户名不存在！')
+            //this.clear()
+         // } //else if (this.pass[userpos] !== this.password) {
+            //alert('密码错误！')
+            //this.clear()
+         // } //else {
+          //  alert('登陆成功!')
+          this.show='false'
             this.$router.push('/home')
-          }
+         // }
         }
       },
       signup_func () {
@@ -92,7 +111,6 @@
     }
   }
 </script>
-
 <style>
   .loginstyle{
     text-align: center;
@@ -102,18 +120,19 @@
   }
   input{
     display:block;
-    width:250px;
+    width:150px;
     height:40px;
     line-height:40px;
-    margin:0 auto;
-    margin-bottom: 10px;
+    margin:15px;
+    margin-bottom: 15px;
     outline:none;
-    border:1px solid #888;
-    padding:10px;
+    border:1px solid #73d0f1;
+    padding:15px;
     box-sizing:border-box;
+    margin-left:20px;
   }
   button{display:block;
-    width:250px;
+    width:150px;
     height:40px;
     line-height: 40px;
     margin:0 auto;
@@ -123,4 +142,17 @@
     font-size:16px;
     margin-bottom:5px;
   }
+  .transition-box {
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100px;
+    border-radius: 4px;
+    background-color: #409EFF;
+    text-align: center;
+    color: #fff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+  }
+
 </style>
