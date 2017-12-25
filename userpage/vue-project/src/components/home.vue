@@ -140,6 +140,7 @@
         address: 'No. 189, Grove St, Los Angeles'
       };
       return {
+        zan:false,
         zhujiemian: true,
         jipaifan: false,
         niuroulamian: false,
@@ -162,6 +163,7 @@
       },
       open() {
         this.$message('刚刚有人给你点赞了！');
+        this.zan=true;
       }
     }
     };

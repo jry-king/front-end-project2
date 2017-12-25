@@ -7,6 +7,9 @@ describe('home.vue', () => {
   it('has a methods object', () => {
     expect(typeof home.methods).to.eql('object')
   })
+  it('zan', () => {
+    expect(vm.zan).to.be.equal(false)
+  })
   it('zhujiemian', () => {
     expect(vm.zhujiemian).to.be.equal(true)
   })
@@ -32,6 +35,10 @@ describe('home.vue', () => {
   it('function：handleCommand', () => {
     vm.handleCommand('zhujiemian');
     expect(vm.zhujiemian).to.equal(true)
+  })
+  it('function：open', () => {
+    vm.open();
+    expect(vm.zan).to.equal(true)
   })
 })
 
