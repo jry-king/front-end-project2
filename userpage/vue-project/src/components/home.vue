@@ -45,8 +45,20 @@
       <el-main>
         <!-- 图片轮播-->
         <el-carousel :interval="4000" type="card" height="330px">
-          <el-carousel-item v-for="item in 6" :key="item">
+          <el-carousel-item v-for="item in 1" :key="item">
             <img src='../../static/4.png'>
+            <h3>{{ item }}</h3>
+          </el-carousel-item>
+          <el-carousel-item v-for="item in 1" :key="item">
+            <img src='../../static/3.png'>
+            <h3>{{ item }}</h3>
+          </el-carousel-item>
+          <el-carousel-item v-for="item in 1" :key="item">
+            <img src='../../static/2.png'>
+            <h3>{{ item }}</h3>
+          </el-carousel-item>
+          <el-carousel-item v-for="item in 1" :key="item">
+            <img src='../../static/1.png'>
             <h3>{{ item }}</h3>
           </el-carousel-item>
         </el-carousel>
