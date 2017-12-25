@@ -7,18 +7,18 @@
           <img src="../assets/pic.png"></div>
       </transition>
       <div class="loginstyle" v-show="showlogin">
-        <div style="font-size:26px; margin-top:140px; color:steelblue">登录</div>
-        <input v-model="username" placeholder="请输入用户名">
+        <div class="title" style="font-size:26px; margin-top:140px; color:steelblue">登录</div>
+        <input class="input1" v-model="username" placeholder="请输入用户名">
         <input v-model="password" placeholder="请输入密码">
         <el-button @click="login_func" style="width:130px">登录</el-button>
-        <div v-on:click="TransToSignup" style="margin-top:20px">没有账号？马上注册</div>
+        <div class="span1" v-on:click="TransToSignup" style="margin-top:20px">没有账号？马上注册</div>
       </div>
       <div class="signupstyle" v-show="showsignup">
-        <div style="font-size:26px; margin-top:140px; color:steelblue">注册</div>
+        <div class="title1" style="font-size:26px; margin-top:140px; color:steelblue">注册</div>
         <input v-model="username" placeholder="请输入用户名">
         <input v-model="password" placeholder="请输入密码">
         <el-button @click="signup_func" style="width:130px">注册</el-button>
-        <div v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
+        <div class="span2" v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
       </div>
     </div>
   </div>

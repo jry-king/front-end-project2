@@ -3,10 +3,9 @@
     <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
       <el-menu :default-openeds="['1', '3']">
         <el-submenu index="1">
-          <template slot="title"><i class="el-icon-menu"></i>发现</template>
-          <el-menu-item index="1-1">
+          <template class="faxian" slot="title"><i class="el-icon-menu"></i>发现</template>
+          <el-menu-item name="1" index="1-1"></el-menu-item>
             <a href="http://localhost:8080/#/food_review" target="_blank">美食点评</a>
-          </el-menu-item>
           <el-menu-item index="1-2">
             美食榜
           </el-menu-item>
@@ -52,7 +51,6 @@
           <el-dropdown-item command="choudoufu">臭豆腐</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
-
       <el-main v-show="zhujiemian">
         <!-- 图片轮播-->
         <el-carousel :interval="4000" type="card" height="330px">
@@ -148,8 +146,8 @@
         shutiao: false,
         choudoufu: false,
         input:'',
-        tableData: Array(20).fill(item),
-        selectedOptions3: ['食堂', '菜系'],
+       // tableData: Array(20).fill(item),
+        //selectedOptions3: ['食堂', '菜系'],
         activeNames: ['1']
       }
     },

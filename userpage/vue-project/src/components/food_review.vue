@@ -56,7 +56,6 @@
     }
   }
 </script>
-
 <style>
   .back_button {
     display:inline;

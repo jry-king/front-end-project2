@@ -32,14 +32,6 @@
           date: '2017-12-24',
           name: 'xxx',
           address: '上海市东川路800号'
-        }, {
-          date: '2017-12-24',
-          name: 'xxx',
-          address: '上海市东川路800号'
-        }, {
-          date: '2017-12-24',
-          name: 'xxx',
-          address: '上海市东川路800号'
         }],
         loading: true
       };
