@@ -1,5 +1,5 @@
 <template>
-  <div id="mylist">
+  <div class="mylist">
     <h1 v-text="title"></h1>
     <input class = 'inputItem' v-model='newItem' v-on:keyup.enter = "addNew"
            placeholder="What is your opinion?">
@@ -70,7 +70,7 @@
   }
 </script>
 <style>
-  #mylist {
+  .mylist {
     width: 500px;
     margin: 30px auto;
     display: flex;

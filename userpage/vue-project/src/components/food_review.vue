@@ -1,6 +1,6 @@
 <template>
 <el-row>
-  <el-col :span="8" v-for="item in 1" :offset="index > 0 ? 2 : 0">
+  <el-col :span="8" v-for="item in 1":key="0" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '30px' }">
       <img src="../../static/3.png" class="image">
       <span>炸薯条</span>
@@ -16,7 +16,7 @@
       </div>
     </el-card>
   </el-col>
-  <el-col :span="8" v-for="item in 1" :offset="index > 0 ? 2 : 0">
+  <el-col :span="8" v-for="item in 1":key="0" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '30px' }">
       <img src="../../static/5.png" class="image">
       <span>贡丸桂林米粉</span>
