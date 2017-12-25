@@ -15,10 +15,11 @@
         </h2>
       </li>
     </ul>
+    <button class="back_button" v-on:click='back()'>Back to home</button>
   </div>
 </template>
 <script>
-  import Store from './store' //导入store
+  import Store from './store'
   export default{
     name: 'forum',
     data () {
@@ -37,6 +38,9 @@
       }
     },
     methods: {
+      back:function () {
+        this.$router.push('/home')
+      },
       addNew: function () {
         if (!this.newItem){
           return
