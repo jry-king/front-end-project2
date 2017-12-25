@@ -2,7 +2,7 @@
   <div>
     <div class="loginstyle" v-show="showlogin">
       <h1>Food in SJTU</h1>
-      <img src="../assets/main.png">
+      <img src="../assets/people/大厅.png">
       <h1>登陆</h1>
       <input v-model="username" placeholder="请输入用户名">
       <input v-model="password" placeholder="请输入密码">
