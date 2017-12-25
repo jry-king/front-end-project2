@@ -38,13 +38,27 @@
       </el-menu>
     </el-aside>
     <el-container>
-      <el-header style="text-align: left; font-size: 20px">
+      <el-header v-show="showcascader"style="text-align: left; font-size: 20px">
         <el-cascader
           :options="options"
           v-model="selectedOptions3"
         ></el-cascader>
       </el-header>
-      <el-main>
+
+      <el-dropdown @command="handleCommand" placement="top">
+        <span class="el-dropdown-link">
+          下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
+        </span>
+        <el-dropdown-menu slot="dropdown">
+          <el-dropdown-item command="主界面">主界面</el-dropdown-item>
+          <el-dropdown-item command="鸡排饭">鸡排饭</el-dropdown-item>
+          <el-dropdown-item command="牛肉拉面">牛肉拉面</el-dropdown-item>
+          <el-dropdown-item command="薯条">薯条</el-dropdown-item>
+          <el-dropdown-item command="臭豆腐">臭豆腐</el-dropdown-item>
+        </el-dropdown-menu>
+      </el-dropdown>
+
+      <el-main v-show="主界面">
         <!-- 图片轮播-->
         <el-carousel :interval="4000" type="card" height="330px">
           <el-carousel-item v-for="item in 1" :key="item">
@@ -86,6 +100,18 @@
           </el-collapse-item>
         </el-collapse>
       </el-main>
+      <el-main v-show="鸡排饭">
+        <span>Weocome to 鸡排饭</span>
+      </el-main>
+      <el-main v-show="牛肉拉面">
+        <span>Weocome to 牛肉拉面</span>
+      </el-main>
+      <el-main v-show="薯条">
+        <span>Weocome to 薯条</span>
+      </el-main>
+      <el-main v-show="臭豆腐">
+        <span>Weocome to 臭豆腐</span>
+      </el-main>
     </el-container>
   </el-container>
 </template>
@@ -100,7 +126,12 @@
   }
 </style>
 <script>
+  import ElAlert from "../../node_modules/element-ui/packages/alert/src/main";
+  import ElDropdown from "../../node_modules/element-ui/packages/dropdown/src/dropdown";
   export default {
+    components: {
+      ElDropdown,
+      ElAlert},
     data() {
       const item = {
         date: '2016-05-02',
@@ -108,6 +139,12 @@
         address: 'No. 189, Grove St, Los Angeles'
       };
       return {
+        主界面: true,
+        鸡排饭: false,
+        牛肉拉面: false,
+        薯条: false,
+        臭豆腐: false,
+        showcascader: false,
         input:'',
         tableData: Array(20).fill(item),
         options: [
@@ -150,13 +187,28 @@
       }
     },
     methods: {
+      handleCommand(command) {
+        this.$message('click on item ' + command);
+        this.主界面 = (command === "主界面")
+        this.鸡排饭 = (command === "鸡排饭")
+        this.牛肉拉面 = ( command === "牛肉拉面")
+        this.薯条 = (command === "薯条")
+        this.臭豆腐 = (command === "臭豆腐")
+      },
       open() {
         this.$message('刚刚有人给你点赞了！');
-      },
-    },
+      }
+    }
     };
 </script>
 <style>
+  .el-dropdown-link {
+    cursor: pointer;
+    color: #409EFF;
+  }
+  .el-icon-arrow-down {
+    font-size: 12px;
+  }
   .demo-input-label {
     display: inline-block;
     width: 130px;
