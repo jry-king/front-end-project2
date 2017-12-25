@@ -59,16 +59,16 @@
         } else {
           var userpos = this.users.indexOf(this.username)
           //if (userpos === -1) {
-            //alert('用户名不存在！')
-            //this.clear()
-         // } //else if (this.pass[userpos] !== this.password) {
-            //alert('密码错误！')
-            //this.clear()
-         // } //else {
+          //alert('用户名不存在！')
+          //this.clear()
+          // } //else if (this.pass[userpos] !== this.password) {
+          //alert('密码错误！')
+          //this.clear()
+          // } //else {
           //  alert('登陆成功!')
           this.show='false'
-            this.$router.push('/home')
-         // }
+          this.$router.push('/home')
+          // }
         }
       },
       signup_func () {
