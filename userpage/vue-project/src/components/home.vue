@@ -45,15 +45,15 @@
           下拉菜单<i class="el-icon-arrow-down el-icon--right"></i>
         </span>
         <el-dropdown-menu slot="dropdown">
-          <el-dropdown-item command="主界面">主界面</el-dropdown-item>
-          <el-dropdown-item command="鸡排饭">鸡排饭</el-dropdown-item>
-          <el-dropdown-item command="牛肉拉面">牛肉拉面</el-dropdown-item>
-          <el-dropdown-item command="薯条">薯条</el-dropdown-item>
-          <el-dropdown-item command="臭豆腐">臭豆腐</el-dropdown-item>
+          <el-dropdown-item command="zhujiemian">主界面</el-dropdown-item>
+          <el-dropdown-item command="jipaifan">鸡排饭</el-dropdown-item>
+          <el-dropdown-item command="niuroulamian">牛肉拉面</el-dropdown-item>
+          <el-dropdown-item command="shutiao">薯条</el-dropdown-item>
+          <el-dropdown-item command="choudoufu">臭豆腐</el-dropdown-item>
         </el-dropdown-menu>
       </el-dropdown>
 
-      <el-main v-show="主界面">
+      <el-main v-show="zhujiemian">
         <!-- 图片轮播-->
         <el-carousel :interval="4000" type="card" height="330px">
           <el-carousel-item v-for="item in 1" :key="item">
@@ -95,22 +95,22 @@
           </el-collapse-item>
         </el-collapse>
       </el-main>
-      <el-main v-show="鸡排饭">
+      <el-main v-show="jipaifan">
         <img src="../../static/4.png">
         <p>Welcome to 鸡排饭</p>
         <span>价格：15元</span>
       </el-main>
-      <el-main v-show="牛肉拉面">
+      <el-main v-show="niuroulamian">
         <img src="../../static/2.png">
         <p>Welcome to 牛肉拉面</p>
         <span>价格：12元</span>
       </el-main>
-      <el-main v-show="薯条">
+      <el-main v-show="shutiao">
         <img src="../../static/3.png">
         <p>Welcome to 薯条</p>
         <span>价格：4元</span>
       </el-main>
-      <el-main v-show="臭豆腐">
+      <el-main v-show="choudoufu">
         <img src="../../static/1.png">
         <p>Welcome to 臭豆腐</p>
         <span>价格：4元</span>
@@ -129,12 +129,12 @@
   }
 </style>
 <script>
-  import ElAlert from "../../node_modules/element-ui/packages/alert/src/main";
-  import ElDropdown from "../../node_modules/element-ui/packages/dropdown/src/dropdown";
+  //import ElAlert from "../../node_modules/element-ui/packages/alert/src/main";
+ // import ElDropdown from "../../node_modules/element-ui/packages/dropdown/src/dropdown";
   export default {
-    components: {
-      ElDropdown,
-      ElAlert},
+   // components: {
+     // ElDropdown,
+     // ElAlert},
     data() {
       const item = {
         date: '2016-05-02',
@@ -142,11 +142,11 @@
         address: 'No. 189, Grove St, Los Angeles'
       };
       return {
-        主界面: true,
-        鸡排饭: false,
-        牛肉拉面: false,
-        薯条: false,
-        臭豆腐: false,
+        zhujiemian: true,
+        jipaifan: false,
+        niuroulamian: false,
+        shutiao: false,
+        choudoufu: false,
         input:'',
         tableData: Array(20).fill(item),
         selectedOptions3: ['食堂', '菜系'],
@@ -156,11 +156,11 @@
     methods: {
       handleCommand(command) {
         this.$message('click on item ' + command);
-        this.主界面 = (command === "主界面")
-        this.鸡排饭 = (command === "鸡排饭")
-        this.牛肉拉面 = ( command === "牛肉拉面")
-        this.薯条 = (command === "薯条")
-        this.臭豆腐 = (command === "臭豆腐")
+        this.zhujiemian = (command === "zhujiemian")
+        this.jipaifan = (command === "jipaifan")
+        this.niuroulamian = ( command === "niuroulamian")
+        this.shutiao = (command === "shutiao")
+        this.choudoufu = (command === "choudoufu")
       },
       open() {
         this.$message('刚刚有人给你点赞了！');
