@@ -29,7 +29,9 @@
               <a href="http://localhost:8080/#/like">收藏</a>
             </el-menu-item>
             <el-badge :value="3" class="item">
-              <el-button  :plain="true" @click="open" size="medium">赞</el-button>
+              <el-button  :plain="true" @click="open" size="medium">
+                <a href="http://localhost:8080/#/like">赞</a>
+              </el-button>
             </el-badge>
           </el-menu-item-group>
         </el-submenu>
