@@ -1,29 +1,26 @@
 <template>
   <div>
-    <div class="loginstyle" v-show="showlogin">
-    <div style="display: flex">
+    <div  class="display:flex">
       <transition name="el-fade-in-linear">
         <div v-show="show">
           <img src="../assets/pic.png"></div>
       </transition>
       <div class="loginstyle" v-show="showlogin">
-        <div style="font-size:26px; margin-top:140px; color:steelblue">登录</div>
-        <input v-model="username" placeholder="请输入用户名">
-        <input v-model="password" placeholder="请输入密码">
+        <div style="font-size:26px; color:steelblue">登录</div>
+        <input style="margin-left:515px" v-model="username" placeholder="请输入用户名">
+        <input style="margin-left:515px"v-model="password" placeholder="请输入密码">
         <el-button @click="login_func" style="width:130px">登录</el-button>
         <div v-on:click="TransToSignup" style="margin-top:20px">没有账号？马上注册</div>
       </div>
       <div class="signupstyle" v-show="showsignup">
-        <div style="font-size:26px; margin-top:140px; color:steelblue">注册</div>
-        <input v-model="username" placeholder="请输入用户名">
-        <input v-model="password" placeholder="请输入密码">
+        <div style="font-size:26px; color:steelblue">注册</div>
+        <input style="margin-left:515px"v-model="username" placeholder="请输入用户名">
+        <input style="margin-left:515px"v-model="password" placeholder="请输入密码">
         <el-button @click="signup_func" style="width:130px">注册</el-button>
         <div v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
       </div>
     </div>
-    </div>
   </div>
-
 </template>
 <script>
   export default{
