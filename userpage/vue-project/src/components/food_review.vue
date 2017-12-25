@@ -1,12 +1,31 @@
 <template>
 <el-row>
-  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 2 : 0">
+  <el-col :span="8" v-for="item in 1" :offset="index > 0 ? 2 : 0">
     <el-card :body-style="{ padding: '30px' }">
       <img src="../../static/3.png" class="image">
+      <span>炸薯条</span>
       <img src="../../static/4.png" class="image">
+      <span>鸡排饭</span>
       <img src="../../static/2.png" class="image">
+      <span>牛肉拉面</span>
       <div style="padding: 14px;">
         <span>food</span>
+        <div class="bottom clearfix">
+          <time class="time">{{ currentDate }}</time>
+        </div>
+      </div>
+    </el-card>
+  </el-col>
+  <el-col :span="8" v-for="item in 1" :offset="index > 0 ? 2 : 0">
+    <el-card :body-style="{ padding: '30px' }">
+      <img src="../../static/5.png" class="image">
+      <span>贡丸桂林米粉</span>
+      <img src="../../static/6.png" class="image">
+      <span>金针菇拉面</span>
+      <img src="../../static/7.png" class="image">
+      <span>武汉热干面</span>
+      <div style="margin-left:100px; padding: 14px;">
+
         <div class="bottom clearfix">
           <time class="time">{{ currentDate }}</time>
         </div>

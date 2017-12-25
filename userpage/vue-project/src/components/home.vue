@@ -70,6 +70,10 @@
             <img src='../../static/1.png'>
             <h3>{{ item }}</h3>
           </el-carousel-item>
+          <el-carousel-item v-for="item in 1" :key="item">
+            <img src='../../static/5.png'>
+            <h3>{{ item }}</h3>
+          </el-carousel-item>
         </el-carousel>
         <!-- 评价&简介-->
         <el-collapse v-model="activeNames" @change="handleChange"
@@ -111,7 +115,7 @@
       <el-main v-show="choudoufu">
         <img src="../../static/1.png">
         <p>Welcome to 臭豆腐</p>
-        <span>价格：4元</span>
+        <span>价格：3元</span>
       </el-main>
     </el-container>
   </el-container>
