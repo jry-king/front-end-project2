@@ -101,16 +101,16 @@
         </el-collapse>
       </el-main>
       <el-main v-show="鸡排饭">
-        <span>Weocome to 鸡排饭</span>
+        <span>Welcome to 鸡排饭</span>
       </el-main>
       <el-main v-show="牛肉拉面">
-        <span>Weocome to 牛肉拉面</span>
+        <span>Welcome to 牛肉拉面</span>
       </el-main>
       <el-main v-show="薯条">
-        <span>Weocome to 薯条</span>
+        <span>Welcome to 薯条</span>
       </el-main>
       <el-main v-show="臭豆腐">
-        <span>Weocome to 臭豆腐</span>
+        <span>Welcome to 臭豆腐</span>
       </el-main>
     </el-container>
   </el-container>
