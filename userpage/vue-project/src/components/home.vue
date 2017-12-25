@@ -101,16 +101,24 @@
         </el-collapse>
       </el-main>
       <el-main v-show="鸡排饭">
-        <span>Welcome to 鸡排饭</span>
+        <img src="../../static/4.png">
+        <p>Welcome to 鸡排饭</p>
+        <span>价格：15元</span>
       </el-main>
       <el-main v-show="牛肉拉面">
-        <span>Welcome to 牛肉拉面</span>
+        <img src="../../static/2.png">
+        <p>Welcome to 牛肉拉面</p>
+        <span>价格：12元</span>
       </el-main>
       <el-main v-show="薯条">
-        <span>Welcome to 薯条</span>
+        <img src="../../static/3.png">
+        <p>Welcome to 薯条</p>
+        <span>价格：4元</span>
       </el-main>
       <el-main v-show="臭豆腐">
-        <span>Welcome to 臭豆腐</span>
+        <img src="../../static/1.png">
+        <p>Welcome to 臭豆腐</p>
+        <span>价格：4元</span>
       </el-main>
     </el-container>
   </el-container>

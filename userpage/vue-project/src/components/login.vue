@@ -20,10 +20,7 @@
         <div v-on:click="TransToLogin" style="margin-top:20px">已有账号？立即登陆</div>
       </div>
     </div>
-    <div>
-    </div>
   </div>
-
 </template>
 <script>
   export default{
